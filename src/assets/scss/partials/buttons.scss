@@ -1,0 +1,35 @@
+.btn {
+  height: 42px;
+  border: none;
+  transition: 0.5s;
+  &.btn-primary {
+    background-color: black;
+    color: white;
+    &:focus {
+      background-color: #f52a50 !important;
+      color: white !important;
+      box-shadow: none !important;
+    }
+    &:hover {
+      background-color: #f52a50;
+      transition: 0.5s;
+    }
+  }
+}
+
+// login-link
+.login-link {
+  text-align: center;
+  margin-top: 25px;
+  a {
+    display: inline-flex;
+    font-size: 14px;
+    padding: 10px 15px;
+    border: 1px solid #e1e1e1;
+    color: #333;
+    &:hover {
+      color: #f52a50;
+      border-color: #f52a50;
+    }
+  } 
+}

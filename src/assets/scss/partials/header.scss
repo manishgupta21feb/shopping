@@ -1,0 +1,177 @@
+.header-top {
+  background-color: #f5f5f5;
+  height: 44px;
+  font-size: 14px;
+  .container {
+    height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .number-mail-wrapper {
+    width: 25%;
+  }
+  .middle-text {
+    width: 50%;
+    text-align: center;
+    span {
+      background-color: #f52a50;
+      color: white;
+      padding: 3px 5px;
+      border-radius: 4px;
+      margin-left: 4px;
+    }
+  }
+  .social-icons {
+    width: 25%;
+  }
+}
+
+// number-mail-wrapper
+.number-mail-wrapper {
+  ul {
+    display: flex;    
+    li {
+      position: relative;
+      .number-text, .mail-text {
+        display: flex;
+        align-items: center;
+        span {
+          margin-right: 8px;
+        }
+      }
+      &:last-child {
+        margin-left: 10px;
+        padding-left: 13px;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-color: black;
+          height: 14px;
+          width: 1px;
+        }
+      }
+    }
+  }  
+}
+
+// main-header
+.main-header {
+  height: 95px;
+  background-color: white;
+  .container {
+    height: 95px;
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    width: 25%;
+  }
+  .header-nav {
+    width: 50%;
+  }
+  .header-right {
+    width: 25%;
+  }
+}
+
+// header-nav
+.header-nav {
+  ul {
+    display: flex;
+    justify-content: center;
+    a {
+      color: #333;
+      padding: 10px 15px;
+      &:hover {
+        color: #f52a50;
+      }
+    }
+  }  
+}
+
+// social-icons
+.social-icons {
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    a {
+      font-size: 16px;
+      margin: 0 7px;
+      color: #333;
+      span {
+        &.icon-facebook {
+          color: #3B5998;
+        }
+        &.icon-twitter {
+          color: #00aced;
+        }
+        &.icon-instagram {
+          color: #e95950;
+        }
+        &.icon-pinterest {
+          color: rgb(189, 8, 28);
+        }
+      }
+    }
+  }
+}
+
+// header-right
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+// login-signup
+.login-signup {
+  display: flex;
+  li {
+    &:first-child {
+      margin-right: 5px;
+    }
+  }
+  a {
+    display: flex;
+    align-items: center;
+    color: #333;
+    &:hover {
+      color: #f52a50;
+    }
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+
+// search-cart
+.search-cart {
+  display: flex;
+  margin-left: 25px;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    left: -13px;
+    top: -1px;
+    background-color: #333;
+    height: 18px;
+    width: 1px;
+  }
+  li {
+    span {
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        color: #f52a50;
+        transition: 0.5s;
+      }
+    }
+    &:last-child {
+      span {
+        margin-left: 15px;
+      }
+    }
+  }
+}
