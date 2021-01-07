@@ -1,17 +1,17 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../src/assets/scss/index.scss';
-import Header from '../src/components/Header';
-import Footer from '../src/components/Footer';
-import Login from '../src/components/Login';
-import Signup from '../src/components/Signup';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../src/assets/scss/index.scss";
+import SignUp from "./components/SignUp";
+import Login from "./components/Login";
+import Header from "./elements/Header";
+import Footer from "./elements/Footer";
 
 function App() {
   return (
     <div>
-      <Header/>
-      {/* <Login/> */}
-      <Signup/>
-      <Footer/>
+      <Header />
+      {/* <Login /> */}
+      <SignUp />
+      <Footer />
     </div>
   );
 }
