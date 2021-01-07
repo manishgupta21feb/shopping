@@ -1,18 +1,26 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../src/assets/scss/index.scss";
-import SignUp from "./components/SignUp";
-import Login from "./components/Login";
-import Header from "./elements/Header";
-import Footer from "./elements/Footer";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+import allRoutes from "./routes";
+import PrivateRoute from "./elements/PrivateRoute/PrivateRoute";
+import PublicRoute from "./elements/PublicRoute/PublicRoute";
+import Layout from "./elements/Layout/Layout";
 
 function App() {
   return (
-    <div>
-      <Header />
-      {/* <Login /> */}
-      <SignUp />
-      <Footer />
-    </div>
+    <Router>
+        <Layout>
+          <Switch>
+            {allRoutes.map((route, i) =>
+              route.private ? (
+                <PrivateRoute key={i} {...route} path={`${route.path}`} />
+              ) : (
+                <PublicRoute key={i} {...route} path={`${route.path}`} />
+              )
+            )}
+          </Switch>
+        </Layout>
+    </Router>
   );
 }
 
